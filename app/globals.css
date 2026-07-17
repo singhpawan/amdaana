@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist);
+  --font-serif: var(--font-lora);
+}
+
+:root {
+  --background: #f7f7f2;
+  --card: #ffffff;
+  --foreground: #17231f;
+  --muted: #61706a;
+  --border: #dce2de;
+  --primary: #0d5c49;
+  --primary-foreground: #f7f7f2;
+  --accent: #b3841f;
+  --danger: #b42318;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101815;
+    --card: #17221e;
+    --foreground: #edf3f0;
+    --muted: #a1b0aa;
+    --border: #304039;
+    --primary: #52b598;
+    --primary-foreground: #0d1915;
+    --accent: #d2aa55;
+    --danger: #ff8a80;
+  }
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body { margin: 0; min-height: 100vh; background: var(--background); color: var(--foreground); font-family: var(--font-geist), sans-serif; }
+button, input { font: inherit; }
+a { color: inherit; }
